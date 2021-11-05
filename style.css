@@ -3,6 +3,10 @@
      padding: 0;
  }
 
+ html {
+  scroll-behavior: smooth;
+}
+
  /* =====Pre Loader===== */
  #loader-container{
     position: fixed;
@@ -24,12 +28,12 @@
 }
 
   /* =====Nav Bar===== */
-  .navbar {
+  #navbar {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2rem;
     font-weight: 900;
     display: flex;
-    position: relative;
+    position: fixed;
     justify-content: space-between;
     align-items: center;
     background-color: transparent;
@@ -71,8 +75,6 @@
   color: white;
   background-color: black;
   border-radius: 2rem;
-  transition: ease-in 0.4s;
-  padding: 0.4rem 0.5rem;
 }
 
 .toggle-button {
@@ -94,7 +96,7 @@
 }
 
 @media (max-width: 800px) {
-    .navbar {
+    #navbar {
         flex-direction: column;
         align-items: flex-start;
         background-color: rgba(0,0,0,0.5);
@@ -131,11 +133,28 @@
         display: flex;
         color: rgb(255, 255, 255);
     }
-}
+  }
 
 /* =====Get started===== */
+.ecellMain{
+  position: static;
+  object-fit: contain;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+.ecell{
+  position: static;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+}
 .started{
-font-weight: 900;
+font-weight: bolder;
 position: absolute;
 width: 40%;
 height: 320px;
@@ -145,15 +164,14 @@ text-align: center;
 padding-top: 10%;
 background: rgba( 255, 255, 255, 0.65 );
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 7.5px );
+backdrop-filter: blur( 5.5px );
 -webkit-backdrop-filter: blur( 7.5px );
-border-radius: 2px;
+border-radius: 20px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .notes{
-  font-family: 'Raleway', sans-serif;
-  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
   font-size: 45px;
   line-height: 75px;
   text-align: center;
@@ -208,6 +226,16 @@ cursor: pointer;
   text-align: center;
   margin: 50px;
   height: fit-content;
+}
+
+#welcomeScreen h2:after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background-color: #620DF6;
+  margin-top: 20px;
+  margin-left: 50%;
 }
 
 #welcomeScreen h3 {
@@ -369,4 +397,149 @@ cursor: pointer;
 
 .item:hover .overlay{
   opacity: 1;
+}
+
+/* ======OUR INITIATIVE===== */
+
+.ourInitiatives{
+width: 100vw;
+height: 30vh;
+background: #464547;
+margin-top: 2rem;
+text-align: center;
+top: 50%;
+left: 50%;
+}
+
+#heading2{
+  padding-top: 2rem;
+  color: #FFFAFA;
+  font-family: Inter;
+font-style: normal;
+font-weight: 800;
+font-size: 96px;
+}
+
+.card{
+  margin-top: 1.5rem;
+  height: 70vh;
+  /* width: 33.33%; */
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+#card1{
+  background-color:#1994B3;
+  height: 70vh;
+  width: 33.33%;
+}
+
+#card2{
+  background-color: #0029D2;
+  height: 70vh;
+  width: 33.33%;
+}
+
+#card3{
+  height: 70vh;
+  width: 33.33%;
+  background: #575757;
+}
+
+.kickstartTitle, .E-SummitTitle, .YEAwardTitle{
+  text-align: center;
+  font-family: Noto Serif;
+font-style: normal;
+font-weight: bold;
+padding-top: 0.4rem;
+font-size: 2.5rem;
+text-shadow: black 1px 1px;
+}
+
+.kickstart, .E-Summit, YEAwards{
+  margin-top: 7vh;
+}
+
+#kickstartSpan, #E-SummitSpan, #YEAwardSpan{
+  font-family: Noto Serif Bengali;
+font-style: normal;
+font-weight: normal;
+font-size: 1.1rem;
+line-height: 30px;
+text-align: center;
+letter-spacing: 2px;
+}
+
+/* =====footer===== */
+footer{ 
+  font-family: 'Roboto', sans-serif;
+  background-color:#202124;
+  color:white;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+#footerbottom {
+  background-color:#4a4d55;
+  font-size: 10px;
+  color:cornsilk;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0px;
+  margin: 0;
+}
+
+footer img {
+  margin-top: 25px;
+  margin-bottom: 0px;
+}
+
+footer p {
+  letter-spacing: 2px;
+  margin-top: 25px; 
+}
+
+#logoContnr {
+  margin: 30px;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 300px;
+}
+
+svg {
+  color: white;
+}
+
+svg:hover {
+  cursor: pointer;
+}
+
+.fb:hover, .fb:active {
+  color:#0A82ED;
+}
+
+.ig:hover, .ig:active {
+  color: #CA2D8B;
+}
+
+.li:hover, .li:active {
+  color: #0A66C2;
+}
+
+.yt:hover, .yt:active {
+  color: #FF0000;
+}
+
+.tw:hover, .tw:active {
+  color: #1DA1F2;
 }
