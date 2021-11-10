@@ -204,8 +204,6 @@
     </a>
   </footer>
 
-
-
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -219,7 +217,7 @@
     if (state == 'interactive') { document.getElementsByClassName('body-inner').item(0).style.visibility = "hidden"; }
     else if (state == 'complete') {
       const loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
-      const THRESHOLD = 2000;
+      const THRESHOLD = 1000;
       const MIN_LOAD_TIME = loadTime < THRESHOLD ? THRESHOLD : 0;
       setTimeout(() => {
         id$('loader-container').style.visibility = "hidden";

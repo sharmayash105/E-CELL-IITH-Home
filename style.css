@@ -16,7 +16,7 @@ body {
   scrollbar-width: none;
 }
 
- /* =====Pre Loader===== */
+ /* =====Pre Loader(Yash)===== */
  #loader-container{
     position: fixed;
     width: 100%;
@@ -25,7 +25,7 @@ body {
     z-index: 9999;
   }
 
-  /* =====Background img===== */
+  /* =====Background img(Yash)===== */
   .container{
     top: 20%;
     background: url(landingPage.gif) no-repeat center center fixed;
@@ -37,7 +37,7 @@ body {
     height: 100vh;
 }
 
-  /* =====Nav Bar===== */
+  /* =====Nav Bar(Yash)===== */
  
 #navbar {
   transition: 0.4s; 
@@ -191,7 +191,6 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   font-size: 4.5rem;
   position: absolute;
   color: rgb(255, 255, 255);
-  /* text-align: center; */
   top: 40%;
   left: 50%;
   -webkit-transform: translate3d(-50%,-50%,0);
@@ -565,4 +564,10 @@ svg {
 svg:hover, svg:active {
   cursor: pointer;
   color: #6F60F6;
+}
+
+@media (max-width: 800px) {
+  footer {
+    padding-top: 3rem;
+  }
 }
