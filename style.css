@@ -156,7 +156,7 @@
 /* --------------- Page 1 Main (Yash) --------------- */
 
 .container{
-  background: url(images/background2.jpg) no-repeat center center fixed; 
+  /* background: url(images/background2.jpg) no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -302,9 +302,9 @@
 #aGist {
   position: relative;
   margin: 60px auto 100px;
-  max-width: 900px;
+  max-width: 1100px;
   width: 95vw;
-  height: 65vh;
+  height: 85vh;
 }
 
 #aGist .item {
@@ -332,28 +332,28 @@
 
 #aGist .a {
   width: 29%;
-  height: 50vh;
+  height: 57vh;
   margin-top: 8vh;
   box-shadow: inset 0 0 0 100vmax rgba(196, 196, 196, 0.7);
 }
 
 #aGist .b {
   width: 42%;
-  height: 35vh;
+  height: 45vh;
   box-shadow: inset 0 0 0 100vmax rgba(98, 13, 246, 0.7);
   color: white;
 }
 
 #aGist .c {
   width: 29%;
-  height: 35vh;
+  height: 45vh;
   box-shadow: inset 0 0 0 100vmax rgba(196, 196, 196, 0.7);
 }
 
 .lower {
   width: 75%;
   left: 29%;
-  top: -21vh;
+  top: -18vh;
   overflow-x: hidden;
 }
 
@@ -365,7 +365,7 @@
 
 #aGist .e {
   width: 40%;
-  height: 30vh;
+  height: 40vh;
   box-shadow: inset 0 0 0 100vmax rgba(98, 13, 246, 0.7);
   color: white;
 }
@@ -400,7 +400,11 @@
   opacity: 1;
 }
 
-/* ======OUR INITIATIVE===== */
+@media (max-width: 900px) {
+  /* Code for tiles on mobile will go here   */
+}
+
+/* ====== OUR INITIATIVES (Anish) ===== */
 
 .ourInitiatives{
 background: #464547;
@@ -419,22 +423,8 @@ font-weight: 800;
 font-size: 4.5rem;
 }
 
-.initiativeCont
-{
-  display: flex;
-}
-
-.card{
-  color: white;
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  height: 40vh;
-}
-
-#card1{
-  background-color:#1994B3;
+#card1 {
+  background-color: #1994B3;
 }
 
 #card2{
@@ -445,7 +435,12 @@ font-size: 4.5rem;
   background: #575757;
 }
 
-.kickstartTitle, .E-SummitTitle, .YEAwardTitle{
+.card {
+  flex: 1;
+  padding: 15px;
+}
+
+.title{
   text-align: center;
   font-family: Noto Serif;
   font-style: normal;
@@ -453,24 +448,42 @@ font-size: 4.5rem;
   padding-top: 0.4rem;
   margin-bottom: 12px;
   font-size: 2.5rem;
+  line-height: 3rem;
   text-shadow: black 1px 1px;
+  color: white;
 }
 
-.kickstart, .E-Summit, .YEAward{
+.content {
   font-family: Noto Serif Bengali;
   font-size: 1.1rem;
   line-height: 30px;
   text-align: center;
   letter-spacing: 2px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  color: white;
+}
+
+.images {
+  display: flex;
+}
+
+.images > img {
+  width: calc(100%/3);
 }
 
 @media (max-width: 900px) {
-  .initiativeCont{
+  .content{
     flex-direction: column;
+    height: 120vh;
+  }
+  .contentCard {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .images {
+    display: none;
   }
 }
 
