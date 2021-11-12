@@ -110,6 +110,22 @@
         <div class="item f"></div>
       </div>
     </div>
+
+    <div id="aGistMob">
+      <div class="group one">
+        <div class="item aM"></div>
+        <div class="item bM">Idea Validation</div>
+      </div>
+      <div class="group two">
+        <div class="item cM"></div>
+        <div class="item dM">Global Network</div>
+        <div class="item eM"></div>
+      </div>
+      <div class="group three">
+        <div class="item fM">Vision</div>
+        <div class="item gM">E - Networking</div>
+      </div>
+    </div>
   </div>
 
   <div class="ourInitiatives">
@@ -228,15 +244,15 @@
 
   // back to page-top on reload(Tanmay Shah)
   window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    }
-    // remove fragment as much as it can go without adding an entry in browser history:
-    window.location.replace("#");
+    window.scrollTo(0, 0);
+  }
+  // remove fragment as much as it can go without adding an entry in browser history:
+  window.location.replace("#");
 
-    // slice off the remaining '#' in HTML5:    
-    if (typeof window.history.replaceState == 'function') {
-        history.replaceState({}, '', window.location.href.slice(0, -1));
-    }
+  // slice off the remaining '#' in HTML5:    
+  if (typeof window.history.replaceState == 'function') {
+    history.replaceState({}, '', window.location.href.slice(0, -1));
+  }
 </script>
 
 <!-- first page script -->
