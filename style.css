@@ -610,23 +610,6 @@ body {
   width: 100vw;
 }
 
-@media (max-width: 800px) {
-  .form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .getInTouch, .contactUs, .stayUpdated{
-    width: 100vw;
-    display: flexbox;
-    width: max-content;
-  }
-  .formHeading, .touchHeading, .updateHeading {
-    font-size: 1.5rem;
-    width: max-content;
-  }
-}
-
 .getInTouch, .contactUs, .stayUpdated{
   padding-left: 5rem;
   width: 33.33vw;
@@ -714,6 +697,31 @@ input {
   -webkit-backdrop-filter: blur(4px);
   border-radius: 2px;
   border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 800px) {
+  .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .getInTouch, .contactUs, .stayUpdated{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    justify-content: center;
+    align-items: center;
+  }
+  .formHeading, .touchHeading, .updateHeading {
+    font-size: 1.5rem;
+    width: max-content;
+
+  }
+  .formInput {
+    width: 7rem;
+    height: 30px;
+  }
 }
 
 /* =====footer(yash)===== */
