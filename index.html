@@ -30,7 +30,7 @@
   <!-- =====Nav Bar(Yash)===== -->
   <nav id="navbar">
     <div class="brand-title">
-      <img src="images/ecell_logo.png" alt="E-CELL IITH" />
+      <a href="#"><img src="images/ecell_logo.png" alt="E-CELL IITH" /></a>
     </div>
     <a class="toggle-button" style="scroll-behavior: smooth;">
       <span class="bar"></span>
@@ -41,12 +41,16 @@
       <ul id="navUL">
         <li><a href="#welcomeScreen">Home</a></li>
         <li><a href="#aGist">Vision</a></li>
-        <li><a href="#heading2">Initiatives</a></li>
+        <li><a href="#slideshow-container">Gallery</a></li>
+        <li><a href="#team">team</a></li>
         <li>
           <a href="https://ecell.iith.ac.in/esummit/index.html">E-Summit</a>
         </li>
         <li>
           <a href="https://ecell.iith.ac.in/ca/index.html">CA Programme</a>
+        </li>
+        <li>
+          <a href="https://tanmayshah07.github.io/E-CELL-IITH-Startup/">StartUps</a>
         </li>
         <li>
           <a href="https://ecell.iith.ac.in/partners/index.html">Partners</a>
@@ -55,7 +59,10 @@
     </div>
   </nav>
 
-  <div class="container"></div>
+  <div class="container">
+    <h3 class="main-title">Entrepreneurship</h3>
+    <h3 class="main-title1">CELL</h3>
+  </div>
 
   <!-- ===== Welcome to E-Cell IITH (Anish) ===== -->
   <div id="welcomeScreen">
@@ -154,6 +161,72 @@
       </div>
     </div>
   </div>
+
+  <!-- =====Gallery (Yash) -->
+<!-- Slideshow container -->
+<div id="slideshow-container">
+  <h3 id="galleryTitle">Gallery</h3>
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <img src="event_gallery/img2.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img9.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img1.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img3.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img4.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img5.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img6.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img7.JPG" class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img8.JPG"  class="eventImg">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="event_gallery/img10.JPG" class="eventImg">
+  </div>
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<br>
+
+<!-- The dots/circles -->
+<div class="dotContainer" style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+
+</div>
+</div>
+	<!--=====gallery end=====-->
 
   <!-- Team Section (Anish) -->
   <div id="team">
@@ -429,7 +502,7 @@
               </path>
             </g>
           </svg>
-          <span class="getInTouchContent">0000000000</span>
+          <span class="getInTouchContent">8103184900</span>
         </li>
         <li>
           <svg class="formLogo" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 172 172"
@@ -614,14 +687,44 @@
   }
 
   // navbar color change on scroll (Yash Sharma)
-  window.onscroll = function () { scrollFunction() };
-  function scrollFunction() {
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-      document.getElementById("navbar").style.display = "flex";
-    } else {
-      document.getElementById("navbar").style.display = "none";
-    }
+  // window.onscroll = function () { scrollFunction() };
+  // function scrollFunction() {
+  //   if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+  //     document.getElementById("navbar").style.display = "flex";
+  //   } else {
+  //     document.getElementById("navbar").style.display = "none";
+  //   }
+  // }
+
+  // event gallery (Yash Sharma)
+  var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 </script>
 
 <!-- first page script -->
