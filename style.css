@@ -193,33 +193,31 @@ body {
 
 .main-title {
   font-family: "Inter", sans-serif;
-  font-size: 4.5rem;
+  font-size: 4.2rem;
   position: absolute;
   color: #620df6;
   text-shadow: black 2px 2px;
-  top: 32%;
+  top: 30%;
   left: 48%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate(-50%, -50%, 0);
   animation: animate linear 3s;
   animation-delay: 1.7s;
-  text-decoration: underline #E5B340 0.2rem;
 }
 
 .main-title1 {
   font-family: "Inter", sans-serif;
-  font-size: 4.5rem;
+  font-size: 4rem;
   position: absolute;
   color: #620df6;
   text-shadow: black 2px 2px;
   text-align: center;
-  top: 52%;
+  top: 48%;
   left: 49%;
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate(-50%, -50%, 0);
   animation: animate linear 3s;
   animation-delay: 1.7s;
-  text-decoration: underline #E5B340 0.2rem;
 }
 
 @keyframes animate {
@@ -230,14 +228,14 @@ body {
     opacity: 1;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .main-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     top: 40%;
   }
   .main-title1 {
-    font-size: 2.5rem;
-    top: 50%;
+    font-size: 2.3rem;
+    top: 53%;
   }
 }
 
