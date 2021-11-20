@@ -21,8 +21,7 @@
     height: 4px;
     width: 40px;
     background-color: #620df6;
-    margin-top: 20px;
-    margin-left: 50%;
+    margin: 20px auto;
 }
 
 p, h2,h3 {
