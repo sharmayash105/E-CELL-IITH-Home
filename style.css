@@ -196,7 +196,7 @@ body {
   font-size: 4.2rem;
   position: absolute;
   color: #620df6;
-  /* text-shadow: black 2px 2px; */
+  text-shadow: black 2px 2px;
   top: 30%;
   left: 48%;
   -webkit-transform: translate3d(-50%, -50%, 0);
@@ -507,167 +507,152 @@ body {
   }
 }
 
-/* =====Contact us Form(yash)===== */
+/* ======= Contact us Form (Anish) ======= */
 
 .form {
-  position: relative;
   display: flex;
   flex-direction: row;
   width: 100vw;
-}
-
-.getInTouch,
-.contactUs,
-.stayUpdated {
-  padding-left: 5rem;
-  width: 33.33vw;
-  position: relative;
-  display: inline-block;
-}
-
-.formHeading {
   font-family: "Montserrat", sans-serif;
-  position: relative;
-  padding-top: 2rem;
-  margin-top: 2rem;
+}
+
+.formMob {
+  display: none;
+}
+
+.form * {
+  vertical-align: middle;
+}
+
+.getInTouch, .contactUs, .stayUpdated {
+  width: calc(100%/3);
+}
+
+.heading {
+  text-align: center;
   font-size: 2rem;
-  border-bottom: 5px #620df6;
-  text-decoration: underline #620df6 0.2rem;
+  margin: 40px auto;
 }
 
-.touchHeading {
-  font-family: "Montserrat", sans-serif;
-  position: relative;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  font-size: 2rem;
-  text-decoration: underline #620df6 0.2rem;
-}
-.updateHeading {
-  font-family: "Montserrat", sans-serif;
-  position: relative;
-  padding-top: 2rem;
-  margin-top: 2rem;
-  font-size: 2rem;
-  text-decoration: underline #620df6 0.2rem;
+.touchLogo {
+  height: 36px;
+  border-radius: 5px;
+  margin: 5px;
+  min-height: 36px;
 }
 
-.getInTouch ul li,
-.stayUpdated ul li {
-  text-decoration: none;
-  list-style: none;
-}
-.contactUs ul li {
-  text-decoration: none;
-  list-style: none;
+.touch {
+  margin-top: 20px;
+  margin-left: 20%;
 }
 
-.getInTouch ul,
-.contactUs ul {
-  padding-top: 1.2rem;
+.touch:last-child {
+  display: flex;
 }
 
-.stayUpdated ul{
-  padding-top: 2.8rem;
+input, input:focus {
+  width: calc(75% - 40px);
+  outline: none;
+  line-height: 34px;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 0px 5px 5px 0px;
+  margin: none;
+  padding-left: 10px;
 }
 
-.getInTouch .formLogo {
-  padding-left: 0.5rem;
-  padding-top: 1.5rem;
+textarea {
+  resize: none;
+  padding-left: 7px;
+  padding-top: 5px;
+  width: 75%;
+  height: 100px;
+  border: 1px solid rgb(182,182,182);
+  border-radius: 3px;
 }
 
-.getInTouchContent {
-  padding-left: 0.5rem;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.9rem;
-}
-
-.formContent {
-  position: relative;
-  padding-top: 1.5rem;
-}
-
-input {
-  width: 10rem;
-  margin-top: 0.2rem;
-  border: none;
-}
-
-.formInput {
-  width: 15rem;
-  height: 30px;
-}
-
-.formLogo {
-  justify-content: center;
-  padding-right: 2px;
-  padding-top: 0.2rem;
-  border-radius: 0.3rem;
-  height: 30px;
-  width: 30px;
+textarea:focus-visible {
+  outline: none;
 }
 
 .contactButton {
+  width: calc(75% + 10px);
+  padding: 7px 0px;
   border: none;
-  width: 5rem;
-  height: 20px;
-  background: rgba(98, 13, 246, 0.9);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 4px;
-  border: 0.5px solid rgba(255, 255, 255, 0.18);
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  cursor: pointer;
-  margin-top: 1.5rem;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #620dff;
 }
 
-::-webkit-input-placeholder {
-  font-family: "Montserrat", sans-serif;
+.formLogo {
+  height: 36px;
+  border-radius: 5px 0px 0px 5px;
+  margin-right: none;
+}
+
+.field, .fieldSU{
+  margin: 10px;
+  display: flex;
   justify-content: center;
-  text-align: center;
-  height: 30px;
-  background: rgba(184, 184, 184, 0.25);
-  box-shadow: 0 2px 2px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 2px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-@media (max-width: 800px) {
+.fieldSU {
+  margin-top: 50px;
+}
+
+/* === Responsive layout === */
+
+@media (max-width: 800px)
+{
   .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none;
   }
-  .getInTouch,
-  .contactUs,
-  .stayUpdated {
-    width: 100vw;
-    display: flex;
+  .formMob {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+  }
+  .formMob * {
+    vertical-align: middle;
+  }
+  .getInTouch, .contactUs, .stayUpdated {
+    width: 100%;
+    transition: all 1s ease;
+  }
+  .heading {
+    font-size: 1.5rem;
+  }
+  .collapse {
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    border-bottom: 3px solid rgb(175, 175, 175);
+    border-right: 3px solid rgb(175, 175, 175);
+    position: absolute;
+    right: 40px;
+    transition: all 1s ease;
+  }
+  .collapsible {
+    height: 0px;
+    overflow-y: hidden;
+    transition: all 1s ease;
+  }
+  .toggled {
+    transform: rotate(225deg);
+  }
+  .expanded {
+    height: 40vh;
+  }
+  .heading {
+    border-bottom: 1px solid rgb(199, 199, 199);
+    padding-bottom: 30px;
+    margin-top: 0px;
+  }
+  .getInTouch .heading {
+    margin-top: 30px;
+  }
+  .form {
     flex-direction: column;
-    width: min-content;
     justify-content: center;
     align-items: center;
-  }
-  .formHeading,
-  .touchHeading,
-  .updateHeading {
-    font-size: 2rem;
-    width: max-content;
-    padding-right: 2rem;
-  }
-  .formInput {
-    width: 7rem;
-    height: 30px;
-  }
-  .formLogo {
-    padding-right: 3px;
-    border-radius: 0.3rem;
-    height: 25px;
-    width: 25px;
   }
 }
 
@@ -680,7 +665,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 1rem;
 }
 
 footer > a {
@@ -841,10 +826,6 @@ svg:active {
   #galleryTitle{
     font-size: 2.5rem;
   }
-  .mySlides {
-    /* padding-left: calc(15%); */
-    padding-left: 5.8rem;
-  }
   .eventImg{
     width:70%;
     height: 100vh;
@@ -855,10 +836,6 @@ svg:active {
   #galleryTitle{
     font-size: 2.5rem;
   }
-  .mySlides {
-    /* padding-left: calc(15%); */
-    padding-left: 4rem;
-  }
   .eventImg{
     width:85%;
     height: 50vh;
@@ -867,4 +844,3 @@ svg:active {
     margin-left: 43%;
   }
 }
-
