@@ -39,7 +39,6 @@ body {
 /* =====Nav Bar(Yash)===== */
 
 #navbar {
-  transition: 0.4s;
   position: fixed;
   width: 100vw;
   top: 0;
@@ -56,7 +55,6 @@ body {
   backdrop-filter: blur(11.5px);
   -webkit-backdrop-filter: blur(11.5px);
   border: 1px solid rgba(255, 255, 255, 0.13);
-  transition: ease-out;
   transform-origin: center;
   scroll-behavior: smooth;
 }
@@ -153,7 +151,10 @@ body {
   }
 
   .navbar-links {
-    display: none;
+    transition: all 1s ease;
+    overflow: hidden;
+    height: 0vh;
+    display: flex;
     width: 100%;
   }
 
@@ -174,8 +175,8 @@ body {
     color: rgb(0, 0, 0);
   }
 
-  .navbar-links.active {
-    display: flex;
+  .navbar-links.expanded {
+    height: 100vh;
     color: rgb(255, 255, 255);
   }
 
@@ -195,7 +196,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 4.2rem;
   position: absolute;
-  color: #620df6;
+  color: #000000a1;
   text-shadow: black 2px 2px;
   top: 30%;
   left: 48%;
@@ -209,7 +210,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 4rem;
   position: absolute;
-  color: #620df6;
+  color: #000000a1;
   text-shadow: black 2px 2px;
   text-align: center;
   top: 48%;
@@ -514,40 +515,53 @@ body {
   flex-direction: row;
   width: 100vw;
   font-family: "Montserrat", sans-serif;
-}
-
-.formMob {
-  display: none;
+  padding-bottom: 40px;
 }
 
 .form * {
   vertical-align: middle;
 }
 
-.getInTouch, .contactUs, .stayUpdated {
+.footSection {
   width: calc(100%/3);
+  font-size: 0.7rem;
+}
+
+.footSection.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footLink, .touch, .address {
+  margin-left: 40px;
+  margin-bottom: 5px;
+}
+
+.footLink {
+  text-decoration: none;
+  color: black;
+  width: fit-content;
+}
+
+.footLink:hover {
+  text-decoration: underline;
+}
+
+.footSection .address {
+  display: flex;
+  align-items: center;
 }
 
 .heading {
-  text-align: center;
-  font-size: 2rem;
-  margin: 40px auto;
+  font-size: 1.5rem;
+  margin: 35px 0px 20px 40px;
 }
 
 .touchLogo {
-  height: 36px;
+  height: 1.4rem;
   border-radius: 5px;
   margin: 5px;
-  min-height: 36px;
-}
-
-.touch {
-  margin-top: 20px;
-  margin-left: 20%;
-}
-
-.touch:last-child {
-  display: flex;
+  margin-left: 0px;
 }
 
 input, input:focus {
@@ -604,9 +618,15 @@ textarea:focus-visible {
 @media (max-width: 800px)
 {
   .form {
-    display: none;
+    flex-direction: column;
   }
-  .formMob {
+  .heading {
+    font-size: 1rem;
+  }
+  .footSection {
+    width: 100%;
+  }
+  /* .formMob {
     display: block;
     font-family: "Montserrat", sans-serif;
   }
@@ -616,9 +636,6 @@ textarea:focus-visible {
   .getInTouch, .contactUs, .stayUpdated {
     width: 100%;
     transition: all 1s ease;
-  }
-  .heading {
-    font-size: 1.5rem;
   }
   .collapse {
     width: 16px;
@@ -641,11 +658,6 @@ textarea:focus-visible {
   .expanded {
     height: 40vh;
   }
-  .heading {
-    border-bottom: 1px solid rgb(199, 199, 199);
-    padding-bottom: 30px;
-    margin-top: 0px;
-  }
   .getInTouch .heading {
     margin-top: 30px;
   }
@@ -653,13 +665,13 @@ textarea:focus-visible {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
+  } */
 }
 
 /* =====footer(yash)===== */
 footer {
   font-family: "Roboto", sans-serif;
-  background-color: #ffffff;
+  background-color: #0f0f0f;
   color: #620df6;
   text-align: center;
   display: flex;
@@ -707,8 +719,8 @@ svg {
   color: #620df6;
 }
 
-svg:hover,
-svg:active {
+#logoContnr svg:hover,
+#logoContnr svg:active {
   cursor: pointer;
   color: purple;
 }
